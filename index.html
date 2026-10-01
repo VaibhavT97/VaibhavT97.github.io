@@ -107,6 +107,10 @@
   <circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
 </symbol>
 
+<symbol id="icon-caret" viewBox="0 0 24 24">
+  <path d="M6 9.5 L12 15.5 L18 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
 </defs>
 </svg>
 
@@ -116,19 +120,34 @@
     <button class="navtoggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <div class="navlinks" id="navLinks">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="education.html">Education</a>
-      <a href="experience.html">Experience</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="conferences.html">Conferences</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="awards.html">Awards</a>
-      <a href="leadership.html">Leadership</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <ul class="navlinks" id="navLinks">
+      <li><a href="index.html" class="top active">Home</a></li>
+      <li class="navgroup">
+        <button type="button" class="top" aria-expanded="false">Research <svg class="icon icon-sm caret"><use href="#icon-caret"/></svg></button>
+        <ul class="dropdown">
+          <li><a href="research.html">Research Domains</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="conferences.html">Conferences & Workshops</a></li>
+        </ul>
+      </li>
+      <li class="navgroup">
+        <button type="button" class="top" aria-expanded="false">About <svg class="icon icon-sm caret"><use href="#icon-caret"/></svg></button>
+        <ul class="dropdown">
+          <li><a href="about.html">About</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+        </ul>
+      </li>
+      <li class="navgroup">
+        <button type="button" class="top" aria-expanded="false">Recognition <svg class="icon icon-sm caret"><use href="#icon-caret"/></svg></button>
+        <ul class="dropdown">
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html" class="top">Gallery</a></li>
+      <li><a href="contact.html" class="top">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -163,6 +182,33 @@
     <div class="stat-strip-item"><span class="stat-strip-num">206+</span><span class="stat-strip-label">river catchments studied</span></div>
   </div>
 </header>
+
+<div class="ticker-band">
+  <div class="ticker-inner">
+    <div class="ticker-label"><svg class="icon icon-sm"><use href="#icon-calendar"/></svg> Recent Updates</div>
+    <div class="ticker-viewport">
+      <div class="ticker-track">
+        <span><span class="dot">&#9679;</span>Paper published in <em>Earth's Future</em> (2026) on hydroclimatic drivers of floods across India</span>
+        <span><span class="dot">&#9679;</span>Presenting at IEEE&ndash;IGARSS 2026, Washington, D.C., USA</span>
+        <span><span class="dot">&#9679;</span>Paper published in <em>Journal of Hydrology</em>: coupled flood &amp; public-health risk modelling</span>
+        <span><span class="dot">&#9679;</span>Presenting at EGU General Assembly 2026, Vienna, Austria</span>
+        <span><span class="dot">&#9679;</span>Revision submitted to <em>Environmental Research Letters</em> on baseflow separation methods</span>
+        <span><span class="dot">&#9679;</span>Travel grant awarded for the S2S2D Conference, University of Reading, UK</span>
+        <span><span class="dot">&#9679;</span>Paper published in <em>Natural Hazards</em>: CNN&ndash;U-Net flood susceptibility mapping</span>
+        <span><span class="dot">&#9679;</span>Paper published in <em>Water Resources Management</em>: En-LSTM streamflow model</span>
+        <!-- duplicate for seamless loop -->
+        <span><span class="dot">&#9679;</span>Paper published in <em>Earth's Future</em> (2026) on hydroclimatic drivers of floods across India</span>
+        <span><span class="dot">&#9679;</span>Presenting at IEEE&ndash;IGARSS 2026, Washington, D.C., USA</span>
+        <span><span class="dot">&#9679;</span>Paper published in <em>Journal of Hydrology</em>: coupled flood &amp; public-health risk modelling</span>
+        <span><span class="dot">&#9679;</span>Presenting at EGU General Assembly 2026, Vienna, Austria</span>
+        <span><span class="dot">&#9679;</span>Revision submitted to <em>Environmental Research Letters</em> on baseflow separation methods</span>
+        <span><span class="dot">&#9679;</span>Travel grant awarded for the S2S2D Conference, University of Reading, UK</span>
+        <span><span class="dot">&#9679;</span>Paper published in <em>Natural Hazards</em>: CNN&ndash;U-Net flood susceptibility mapping</span>
+        <span><span class="dot">&#9679;</span>Paper published in <em>Water Resources Management</em>: En-LSTM streamflow model</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <main>
 
@@ -204,35 +250,70 @@
   </div>
 </section>
 
-<section id="about-teaser" class="tint">
+<section id="themes" class="tint">
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-droplet"/></svg></span><h2>Research Themes</h2><div class="rule"></div></div>
+    <div class="gallery-grid">
+
+      <a class="tcard gallery-tile" href="research.html">
+        <div class="tphoto"><img src="assets/img/gallery/flood-mapping.svg" alt="Flood mapping illustration" loading="lazy"></div>
+        <div class="gallery-caption"><h3>Flood Hazards &amp; Inundation Modelling</h3><p>Flood-event analysis and geomorphic flood descriptors across data-scarce Indian catchments.</p></div>
+      </a>
+
+      <a class="tcard gallery-tile" href="research.html">
+        <div class="tphoto"><img src="assets/img/gallery/monsoon-climate.svg" alt="Monsoon climate illustration" loading="lazy"></div>
+        <div class="gallery-caption"><h3>Hydroclimatic Extremes</h3><p>How monsoon dynamics and climate drivers shape flood behaviour nationwide.</p></div>
+      </a>
+
+      <a class="tcard gallery-tile" href="research.html">
+        <div class="tphoto"><img src="assets/img/gallery/streamflow-forecast.svg" alt="Streamflow forecasting illustration" loading="lazy"></div>
+        <div class="gallery-caption"><h3>Streamflow &amp; Baseflow Forecasting</h3><p>Deep-learning forecasting systems with uncertainty quantification for data-scarce basins.</p></div>
+      </a>
+
+      <a class="tcard gallery-tile" href="research.html">
+        <div class="tphoto"><img src="assets/img/gallery/remote-sensing.svg" alt="Remote sensing illustration" loading="lazy"></div>
+        <div class="gallery-caption"><h3>Remote Sensing &amp; Geospatial Hydrology</h3><p>Satellite-driven floodplain mapping and catchment characterisation over ungauged basins.</p></div>
+      </a>
+
+      <a class="tcard gallery-tile" href="research.html">
+        <div class="tphoto"><img src="assets/img/gallery/machine-learning.svg" alt="Machine learning illustration" loading="lazy"></div>
+        <div class="gallery-caption"><h3>Explainable AI for Hydrology</h3><p>Interpretable deep learning that attributes flood drivers rather than just predicting them.</p></div>
+      </a>
+
+      <a class="tcard gallery-tile" href="gallery.html">
+        <div class="tphoto"><img src="assets/img/gallery/global-reach.svg" alt="Global collaboration illustration" loading="lazy"></div>
+        <div class="gallery-caption"><h3>Global Collaboration</h3><p>Conferences and collaborations spanning eight countries across four continents.</p></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="about-teaser">
   <div class="section-inner">
-    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-droplet"/></svg></span><h2>About</h2><div class="rule"></div></div>
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-book"/></svg></span><h2>About</h2><div class="rule"></div></div>
     <p class="about-lede">I am a PhD student in the Department of Water Resources Development and Management at IIT Roorkee, working at the intersection of hydrology, hydroclimatology, and artificial intelligence &mdash; developing forecasting systems that combine physical understanding with machine learning to improve water-resource management under changing environmental conditions.</p>
     <p class="keywords">Flood Resilience <span class="sep">/</span> Hydroclimatic Extremes <span class="sep">/</span> Machine Learning <span class="sep">/</span> Explainable AI <span class="sep">/</span> Streamflow Forecasting <span class="sep">/</span> Hydroclimatology</p>
     <p style="margin-top:18px;"><a href="about.html">Read more about my background &rarr;</a></p>
   </div>
 </section>
 
-<section id="gallery-teaser">
-  <div class="section-inner wide">
-    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-image"/></svg></span><h2>Research in Pictures</h2><div class="rule"></div></div>
-    <div class="gallery-grid">
-      <a class="gallery-tile" href="gallery.html">
-        <img src="assets/img/gallery/flood-mapping.svg" alt="Flood mapping illustration" loading="lazy">
-        <div class="gallery-caption"><h3>Flood Mapping</h3></div>
-      </a>
-      <a class="gallery-tile" href="gallery.html">
-        <img src="assets/img/gallery/streamflow-forecast.svg" alt="Streamflow forecasting illustration" loading="lazy">
-        <div class="gallery-caption"><h3>Streamflow Forecasting</h3></div>
-      </a>
-      <a class="gallery-tile" href="gallery.html">
-        <img src="assets/img/gallery/machine-learning.svg" alt="Machine learning illustration" loading="lazy">
-        <div class="gallery-caption"><h3>Machine Learning &amp; XAI</h3></div>
-      </a>
-    </div>
-    <p style="margin-top:18px;"><a href="gallery.html">See the full gallery &rarr;</a></p>
+<div class="logostrip-band">
+  <div class="logostrip-track">
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>IAHS</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>IWRS</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>GRSS</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>IEEE</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>AGU</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>EGU</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>IAHS</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>IWRS</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>GRSS</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>IEEE</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>AGU</span>
+    <span class="logostrip-item"><svg class="icon icon-md"><use href="#icon-users"/></svg>EGU</span>
   </div>
-</section>
+</div>
 
 </main>
 <footer>

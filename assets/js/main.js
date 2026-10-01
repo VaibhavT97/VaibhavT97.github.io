@@ -9,6 +9,39 @@
   });
 })();
 
+// Dropdown nav groups (click to toggle; closes others; closes on outside click/Escape)
+(function () {
+  const groups = document.querySelectorAll(".navgroup");
+  if (!groups.length) return;
+
+  function closeAll(except) {
+    groups.forEach(function (g) {
+      if (g !== except) {
+        g.classList.remove("open");
+        const b = g.querySelector("button.top");
+        if (b) b.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  groups.forEach(function (group) {
+    const btn = group.querySelector("button.top");
+    if (!btn) return;
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const isOpen = group.classList.contains("open");
+      closeAll(group);
+      group.classList.toggle("open", !isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
+
+  document.addEventListener("click", function () { closeAll(null); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeAll(null);
+  });
+})();
+
 // Publication search filter
 (function () {
   const input = document.getElementById("pubSearch");
