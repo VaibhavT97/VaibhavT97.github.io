@@ -16,6 +16,99 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<defs>
+
+<symbol id="icon-mail" viewBox="0 0 24 24">
+  <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M4 6.5 L12 13 L20 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-phone" viewBox="0 0 24 24">
+  <path d="M6.5 3.5 L9.5 3.5 L11 8 L8.5 9.8 C9.6 12.2 11.8 14.4 14.2 15.5 L16 13 L20.5 14.5 L20.5 17.5 C20.5 19.2 19 20.4 17.4 20 C10.8 18.4 5.6 13.2 4 6.6 C3.6 5 4.8 3.5 6.5 3.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-download" viewBox="0 0 24 24">
+  <path d="M12 3.5 V14.5 M7.5 10.5 L12 15 L16.5 10.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4.5 17.5 V19 C4.5 19.8 5.2 20.5 6 20.5 H18 C18.8 20.5 19.5 19.8 19.5 19 V17.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-external" viewBox="0 0 24 24">
+  <path d="M9 6.5 H5.5 C4.7 6.5 4 7.2 4 8 V18 C4 18.8 4.7 19.5 5.5 19.5 H16 C16.8 19.5 17.5 18.8 17.5 18 V14.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12.5 4.5 H19.5 V11.5 M19.5 4.5 L11 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-cap" viewBox="0 0 24 24">
+  <path d="M12 4.5 L21.5 9 L12 13.5 L2.5 9 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M6.5 11 V15.5 C6.5 17 9 18.5 12 18.5 C15 18.5 17.5 17 17.5 15.5 V11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M21.5 9 V15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-briefcase" viewBox="0 0 24 24">
+  <rect x="3" y="7.5" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M8.5 7.5 V5.5 C8.5 4.7 9.2 4 10 4 H14 C14.8 4 15.5 4.7 15.5 5.5 V7.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M3 12.5 H21" stroke="currentColor" stroke-width="1.6"/>
+</symbol>
+
+<symbol id="icon-flask" viewBox="0 0 24 24">
+  <path d="M10 3.5 H14 M10.5 4 V9.5 L5.5 18 C5 19 5.7 20 6.8 20 H17.2 C18.3 20 19 19 18.5 18 L13.5 9.5 V4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 15 H16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-map" viewBox="0 0 24 24">
+  <path d="M9 4 L4 6 V20 L9 18 L15 20 L20 18 V4 L15 6 L9 4 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M9 4 V18 M15 6 V20" stroke="currentColor" stroke-width="1.6"/>
+</symbol>
+
+<symbol id="icon-users" viewBox="0 0 24 24">
+  <circle cx="8.5" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M3 19 C3 15.5 5.5 13.5 8.5 13.5 C11.5 13.5 14 15.5 14 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="16.5" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M14.5 13.8 C17 13.3 19.8 15 20.5 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-award" viewBox="0 0 24 24">
+  <circle cx="12" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M9 13.5 L7.5 20.5 L12 18 L16.5 20.5 L15 13.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-book" viewBox="0 0 24 24">
+  <path d="M4 5.5 C4 4.7 4.7 4 5.5 4 H11 V19 H5.5 C4.7 19 4 19.7 4 20.5 V5.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M20 5.5 C20 4.7 19.3 4 18.5 4 H13 V19 H18.5 C19.3 19 20 19.7 20 20.5 V5.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-calendar" viewBox="0 0 24 24">
+  <rect x="3.5" y="5.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M3.5 10 H20.5 M8 3.5 V7 M16 3.5 V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-droplet" viewBox="0 0 24 24">
+  <path d="M12 3.5 C12 3.5 5.5 11 5.5 15.5 C5.5 19 8.4 21 12 21 C15.6 21 18.5 19 18.5 15.5 C18.5 11 12 3.5 12 3.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-chart" viewBox="0 0 24 24">
+  <path d="M4 20 V4 M4 20 H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M7 16 L11 11 L14.5 13.5 L19.5 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-image" viewBox="0 0 24 24">
+  <rect x="3.5" y="4.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <circle cx="8.5" cy="9.5" r="1.7" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M4 17 L9.5 12 L13.5 15.5 L16.5 13 L20.5 17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-globe" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M3.5 12 H20.5 M12 3.5 C14.8 6.5 14.8 17.5 12 20.5 C9.2 17.5 9.2 6.5 12 3.5 Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</symbol>
+
+<symbol id="icon-pin" viewBox="0 0 24 24">
+  <path d="M12 21 C12 21 18.5 14.5 18.5 10 C18.5 6.4 15.6 3.5 12 3.5 C8.4 3.5 5.5 6.4 5.5 10 C5.5 14.5 12 21 12 21 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+</symbol>
+
+</defs>
+</svg>
 
 <nav class="topnav">
   <div class="topnav-inner">
@@ -31,6 +124,7 @@
       <a href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="conferences.html">Conferences</a>
+      <a href="gallery.html">Gallery</a>
       <a href="awards.html">Awards</a>
       <a href="leadership.html">Leadership</a>
       <a href="contact.html">Contact</a>
@@ -40,10 +134,11 @@
 
 <header class="hero" id="top">
   <svg class="hero-contour" viewBox="0 0 900 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M -20 300 C 120 260, 180 320, 300 270 C 420 220, 480 280, 600 240 C 720 200, 800 250, 920 210" fill="none" stroke="#1B4B4F" stroke-width="1" opacity="0.18"/>
-    <path d="M -20 330 C 130 300, 190 350, 320 310 C 440 270, 500 320, 620 285 C 740 250, 800 290, 920 255" fill="none" stroke="#1B4B4F" stroke-width="1" opacity="0.14"/>
-    <path d="M -20 255 C 110 210, 170 270, 280 225 C 400 175, 470 230, 590 190 C 710 150, 790 200, 920 165" fill="none" stroke="#B8823D" stroke-width="1" opacity="0.16"/>
-    <path d="M -20 210 C 100 165, 160 215, 260 175 C 380 130, 450 180, 570 145 C 690 105, 780 150, 920 120" fill="none" stroke="#1B4B4F" stroke-width="1" opacity="0.10"/>
+    <path d="M -20 300 C 120 260, 180 320, 300 270 C 420 220, 480 280, 600 240 C 720 200, 800 250, 920 210" fill="none" stroke="#FBFBF9" stroke-width="1" opacity="0.22"/>
+    <path d="M -20 330 C 130 300, 190 350, 320 310 C 440 270, 500 320, 620 285 C 740 250, 800 290, 920 255" fill="none" stroke="#FBFBF9" stroke-width="1" opacity="0.16"/>
+    <path d="M -20 255 C 110 210, 170 270, 280 225 C 400 175, 470 230, 590 190 C 710 150, 790 200, 920 165" fill="none" stroke="#E3B67A" stroke-width="1" opacity="0.28"/>
+    <path d="M -20 210 C 100 165, 160 215, 260 175 C 380 130, 450 180, 570 145 C 690 105, 780 150, 920 120" fill="none" stroke="#FBFBF9" stroke-width="1" opacity="0.14"/>
+    <path d="M -20 150 C 90 110, 150 160, 250 120 C 360 78, 430 125, 550 95 C 660 65, 760 105, 920 75" fill="none" stroke="#E3B67A" stroke-width="1" opacity="0.18"/>
   </svg>
   <div class="hero-inner">
     <div>
@@ -51,23 +146,29 @@
       <h1>Vaibhav Tripathi</h1>
       <p class="hero-role">PhD researcher working at the intersection of hydrology, hydroclimatology, and artificial intelligence — with a focus on floods, streamflow forecasting, and explainable AI across Indian river basins.</p>
       <div class="hero-links">
-        <a href="mailto:vaibhav_t@wr.iitr.ac.in">vaibhav_t@wr.iitr.ac.in</a>
-        <a href="assets/files/Vaibhav_Tripathi_CV.pdf">Download CV</a>
-        <a href="#" id="link-scholar">Google Scholar</a>
-        <a href="#" id="link-linkedin">LinkedIn</a>
+        <a href="mailto:vaibhav_t@wr.iitr.ac.in"><svg class="icon"><use href="#icon-mail"/></svg>vaibhav_t@wr.iitr.ac.in</a>
+        <a href="assets/files/Vaibhav_Tripathi_CV.pdf"><svg class="icon"><use href="#icon-download"/></svg>Download CV</a>
+        <a href="#" id="link-scholar"><svg class="icon"><use href="#icon-external"/></svg>Google Scholar</a>
+        <a href="#" id="link-linkedin"><svg class="icon"><use href="#icon-external"/></svg>LinkedIn</a>
       </div>
     </div>
     <div class="hero-photo">
-      <img src="assets/img/profile.jpg" alt="Portrait of Vaibhav Tripathi" width="148" height="148">
+      <img src="assets/img/profile.jpg" alt="Portrait of Vaibhav Tripathi" width="156" height="156">
     </div>
+  </div>
+  <div class="stat-strip">
+    <div class="stat-strip-item"><span class="stat-strip-num">8</span><span class="stat-strip-label">journal publications</span></div>
+    <div class="stat-strip-item"><span class="stat-strip-num">11</span><span class="stat-strip-label">conference presentations</span></div>
+    <div class="stat-strip-item"><span class="stat-strip-num">8</span><span class="stat-strip-label">countries presented in</span></div>
+    <div class="stat-strip-item"><span class="stat-strip-num">206+</span><span class="stat-strip-label">river catchments studied</span></div>
   </div>
 </header>
 
 <main>
 
 <section id="featured" class="no-border-top">
-  <div class="section-inner">
-    <div class="section-head"><h2>Featured Research</h2><div class="rule"></div></div>
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-flask"/></svg></span><h2>Featured Research</h2><div class="rule"></div></div>
 
     <div class="feature-grid">
 
@@ -96,19 +197,40 @@
         </div>
         <h3>Hydroclimatic drivers of floods across India</h3>
         <p>Interpretable deep learning reveals how climate and catchment drivers interact to shape flood behaviour nationwide.</p>
-        <div class="pub-links"><a href="https://doi.org/10.1029/2026EF008397" target="_blank" rel="noopener">DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1029/2026EF008397" target="_blank" rel="noopener">DOI &nearr;</a></div>
       </article>
 
     </div>
   </div>
 </section>
 
-<section id="about-teaser">
+<section id="about-teaser" class="tint">
   <div class="section-inner">
-    <div class="section-head"><h2>About</h2><div class="rule"></div></div>
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-droplet"/></svg></span><h2>About</h2><div class="rule"></div></div>
     <p class="about-lede">I am a PhD student in the Department of Water Resources Development and Management at IIT Roorkee, working at the intersection of hydrology, hydroclimatology, and artificial intelligence &mdash; developing forecasting systems that combine physical understanding with machine learning to improve water-resource management under changing environmental conditions.</p>
     <p class="keywords">Flood Resilience <span class="sep">/</span> Hydroclimatic Extremes <span class="sep">/</span> Machine Learning <span class="sep">/</span> Explainable AI <span class="sep">/</span> Streamflow Forecasting <span class="sep">/</span> Hydroclimatology</p>
     <p style="margin-top:18px;"><a href="about.html">Read more about my background &rarr;</a></p>
+  </div>
+</section>
+
+<section id="gallery-teaser">
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-image"/></svg></span><h2>Research in Pictures</h2><div class="rule"></div></div>
+    <div class="gallery-grid">
+      <a class="gallery-tile" href="gallery.html">
+        <img src="assets/img/gallery/flood-mapping.svg" alt="Flood mapping illustration" loading="lazy">
+        <div class="gallery-caption"><h3>Flood Mapping</h3></div>
+      </a>
+      <a class="gallery-tile" href="gallery.html">
+        <img src="assets/img/gallery/streamflow-forecast.svg" alt="Streamflow forecasting illustration" loading="lazy">
+        <div class="gallery-caption"><h3>Streamflow Forecasting</h3></div>
+      </a>
+      <a class="gallery-tile" href="gallery.html">
+        <img src="assets/img/gallery/machine-learning.svg" alt="Machine learning illustration" loading="lazy">
+        <div class="gallery-caption"><h3>Machine Learning &amp; XAI</h3></div>
+      </a>
+    </div>
+    <p style="margin-top:18px;"><a href="gallery.html">See the full gallery &rarr;</a></p>
   </div>
 </section>
 
