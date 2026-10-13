@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}document.documentElement.className+=" js";</script>
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -111,6 +112,24 @@
   <path d="M6 9.5 L12 15.5 L18 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
 
+
+<symbol id="icon-moon" viewBox="0 0 24 24">
+  <path d="M20 14.5 A8.5 8.5 0 1 1 9.5 4 A6.8 6.8 0 0 0 20 14.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-sun" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M12 3 V5 M12 19 V21 M3 12 H5 M19 12 H21 M5.6 5.6 L7 7 M17 17 L18.4 18.4 M5.6 18.4 L7 17 M17 7 L18.4 5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-github" viewBox="0 0 24 24">
+  <path d="M12 3.2 C7.1 3.2 3.2 7.1 3.2 12 C3.2 15.9 5.7 19.2 9.2 20.3 C9.6 20.4 9.8 20.1 9.8 19.9 V18.4 C7.4 18.9 6.9 17.3 6.9 17.3 C6.5 16.3 5.9 16 5.9 16 C5.1 15.5 6 15.5 6 15.5 C6.9 15.6 7.4 16.4 7.4 16.4 C8.2 17.7 9.4 17.4 9.9 17.2 C10 16.6 10.2 16.2 10.5 16 C8.6 15.8 6.6 15.1 6.6 11.8 C6.6 10.9 6.9 10.1 7.5 9.5 C7.4 9.3 7.1 8.5 7.6 7.3 C7.6 7.3 8.3 7.1 9.8 8.1 C10.5 7.9 11.2 7.8 12 7.8 C12.8 7.8 13.5 7.9 14.2 8.1 C15.7 7.1 16.4 7.3 16.4 7.3 C16.9 8.5 16.6 9.3 16.5 9.5 C17.1 10.1 17.4 10.9 17.4 11.8 C17.4 15.1 15.4 15.8 13.5 16 C13.8 16.3 14.1 16.8 14.1 17.6 V19.9 C14.1 20.1 14.3 20.4 14.7 20.3 C18.3 19.2 20.8 15.9 20.8 12 C20.8 7.1 16.9 3.2 12 3.2 Z" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-flame" viewBox="0 0 24 24">
+  <path d="M12 3 C12 6.5 8 8.5 8 13 C8 16.3 9.8 18.5 12 18.5 C14.2 18.5 16 16.3 16 13.5 C16 11.8 15.2 10.6 14.2 9.6 C14.2 11 13.4 11.8 12.6 11.8 C12.6 9 12.6 5.5 12 3 Z M12 21 C8.7 21 6 18 6 14 C6 9.5 10 8 10.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
 </defs>
 </svg>
 
@@ -147,6 +166,7 @@
       </li>
       <li><a href="gallery.html" class="top">Gallery</a></li>
       <li><a href="contact.html" class="top">Contact</a></li>
+      <li class="theme-li"><button type="button" class="themetoggle" id="themeToggle" aria-label="Switch between light and dark mode" title="Light / dark"><svg class="icon icon-moon-i"><use href="#icon-moon"/></svg><svg class="icon icon-sun-i"><use href="#icon-sun"/></svg></button></li>
     </ul>
   </div>
 </nav>
@@ -162,6 +182,22 @@
 
     <div class="pub-controls">
       <input type="search" class="pub-search" id="pubSearch" placeholder="Search publications by title, journal, or year…" aria-label="Search publications">
+      <div class="chip-row" id="themeChips" aria-label="Filter by theme">
+        <span class="chip-label">Theme</span>
+        <button class="chip active" data-theme="all">All</button>
+        <button class="chip" data-theme="floods">Flood hazard &amp; inundation</button>
+        <button class="chip" data-theme="forecasting">Streamflow &amp; baseflow</button>
+        <button class="chip" data-theme="xai">ML &amp; explainable AI</button>
+        <button class="chip" data-theme="rs">Remote sensing &amp; multi-hazard</button>
+      </div>
+      <div class="chip-row" id="yearChips" aria-label="Filter by year">
+        <span class="chip-label">Year</span>
+        <button class="chip active" data-year="all">All</button>
+        <button class="chip" data-year="2026">2026</button>
+        <button class="chip" data-year="2025">2025</button>
+        <button class="chip" data-year="2024">2024</button>
+        <button class="chip" data-year="under review">Under review</button>
+      </div>
     </div>
 
     <div id="pubResults">
@@ -169,79 +205,79 @@
     <div class="pub-year-group" data-year="2026">
       <div class="pub-year">2026</div>
 
-      <div class="pub-item" data-text="interpretable deep learning reveals influence and interactions of hydroclimatic drivers on floods across india earth's future tripathi aghakouchak karmakar stein mohanty">
+      <div class="pub-item" data-themes="floods xai" data-text="interpretable deep learning reveals influence and interactions of hydroclimatic drivers on floods across india earth's future tripathi aghakouchak karmakar stein mohanty"><a class="pub-thumb" href="research.html"><img src="assets/img/research/earths-future-flood-processes.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">Interpretable deep learning reveals influence and interactions of hydroclimatic drivers on floods across India</span>
         <span class="pub-meta">Tripathi, V., AghaKouchak, A., Karmakar, S., Stein, L., &amp; Mohanty, M. P. — <span class="pub-journal">Earth's Future</span>, 14(7), e2026EF008397</span>
-        <div class="pub-links"><a href="https://doi.org/10.1029/2026EF008397" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1029/2026EF008397" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div></div>
       </div>
 
-      <div class="pub-item" data-text="coupled hydrological and public health risks from urban flooding journal of hydrology deopa tripathi nandana mohanty">
+      <div class="pub-item" data-themes="floods rs" data-text="coupled hydrological and public health risks from urban flooding journal of hydrology deopa tripathi nandana mohanty"><a class="pub-thumb" href="research.html"><img src="assets/img/research/urban-flood-hazard-yamuna.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">Coupled hydrological and public health risks from urban flooding: integrated remote sensing, machine learning, and hydrodynamic–ecological modelling</span>
         <span class="pub-meta">Deopa, R., Tripathi, V., Nandana, P. S., &amp; Mohanty, M. P. — <span class="pub-journal">Journal of Hydrology</span>, 135999</span>
-        <div class="pub-links"><a href="https://doi.org/10.1016/j.jhydrol.2026.135999" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1016/j.jhydrol.2026.135999" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div></div>
       </div>
 
-      <div class="pub-item" data-text="rapid flood susceptibility mapping indian himalayan region cnn-u-net segmentation natural hazards rachit tripathi mohanty pandey gupta">
+      <div class="pub-item" data-themes="floods rs xai" data-text="rapid flood susceptibility mapping indian himalayan region cnn-u-net segmentation natural hazards rachit tripathi mohanty pandey gupta"><a class="pub-thumb" href="research.html"><img src="assets/img/research/himalaya-cnn-unet-flood.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">Rapid Flood Susceptibility Mapping in the Indian Himalayan Region using CNN-U-Net Segmentation: Insights from the 2025 Monsoon Events</span>
         <span class="pub-meta">Rachit, Tripathi, V., Mohanty, M. P., Pandey, A., &amp; Gupta, A. K. — <span class="pub-journal">Natural Hazards</span>, 122(10), 424</span>
-        <div class="pub-links"><a href="https://doi.org/10.1007/s11069-026-08175-w" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1007/s11069-026-08175-w" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div></div>
       </div>
 
-      <div class="pub-item" data-text="improving daily streamflow predictions large watersheds enhanced long short-term memory en-lstm water resources management sharma tripathi mohanty">
+      <div class="pub-item" data-themes="forecasting xai" data-text="improving daily streamflow predictions large watersheds enhanced long short-term memory en-lstm water resources management sharma tripathi mohanty"><a class="pub-thumb" href="research.html"><img src="assets/img/research/en-lstm-streamflow.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">Improving Daily Streamflow Predictions over Large Watersheds: Introducing a Novel Enhanced Long Short-Term Memory (En-LSTM) Model</span>
         <span class="pub-meta">Sharma, P.*, Tripathi, V.*, &amp; Mohanty, M. P. — <span class="pub-journal">Water Resources Management</span>, 40(2), 92</span>
-        <div class="pub-links"><a href="https://doi.org/10.1007/s11269-025-04475-1" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1007/s11269-025-04475-1" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div></div>
       </div>
     </div>
 
     <div class="pub-year-group" data-year="2025">
       <div class="pub-year">2025</div>
 
-      <div class="pub-item" data-text="cascading impacts 2025 june-july multi-hazard episodes western himalayas natural hazards deopa singh tripathi tyagi mohanty">
+      <div class="pub-item" data-themes="rs floods" data-text="cascading impacts 2025 june-july multi-hazard episodes western himalayas natural hazards deopa singh tripathi tyagi mohanty"><a class="pub-thumb" href="research.html"><img src="assets/img/research/himalaya-multihazard-2025.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">Cascading impacts of 2025 June–July multi-hazard episodes in the Western Himalayas: Evidence through remote sensing observations and Google Earth Engine</span>
         <span class="pub-meta">Deopa, R., Singh, H., Tripathi, V., Tyagi, M., &amp; Mohanty, M. P. — <span class="pub-journal">Natural Hazards</span>, 121(19), 23417–23422</span>
-        <div class="pub-links"><a href="https://doi.org/10.1007/s11069-025-07699-x" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1007/s11069-025-07699-x" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div></div>
       </div>
 
-      <div class="pub-item" data-text="novel framework embedding bayesian-optimized ensemble machine learning explainable artificial intelligence xai flood prediction complex watersheds alam tripathi bhatt mohanty">
+      <div class="pub-item" data-themes="floods xai" data-text="novel framework embedding bayesian-optimized ensemble machine learning explainable artificial intelligence xai flood prediction complex watersheds alam tripathi bhatt mohanty"><a class="pub-thumb" href="research.html"><img src="assets/img/research/kosi-megafan-susceptibility.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">A Novel Framework Embedding Bayesian-optimized Ensemble Machine Learning and Explainable Artificial Intelligence (XAI) to Improve Flood Prediction in Complex Watersheds</span>
         <span class="pub-meta">Alam, M. G., Tripathi, V., Bhatt, C. M., &amp; Mohanty, M. P. — <span class="pub-journal">Environmental and Sustainability Indicators</span>, 27, 100760</span>
-        <div class="pub-links"><a href="https://doi.org/10.1016/j.indic.2025.100760" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1016/j.indic.2025.100760" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div></div>
       </div>
 
-      <div class="pub-item" data-text="geomorphic flood descriptors machine learning data-scarce catchments ganga basin environmental science pollution research tripathi mohanty">
+      <div class="pub-item" data-themes="floods xai" data-text="geomorphic flood descriptors machine learning data-scarce catchments ganga basin environmental science pollution research tripathi mohanty"><a class="pub-thumb" href="research.html"><img src="assets/img/research/ganga-flood-hazard-xgboost.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">Can geomorphic flood descriptors coupled with machine learning models enhance quantifying flood risks over data-scarce catchments? A hybrid framework for the Ganga basin (India)</span>
         <span class="pub-meta">Tripathi, V., &amp; Mohanty, M. P. — <span class="pub-journal">Environmental Science and Pollution Research</span>, 32(59), 31475–31494</span>
-        <div class="pub-links"><a href="https://doi.org/10.1007/s11356-024-33507-3" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div>
+        <div class="pub-links"><a href="https://doi.org/10.1007/s11356-024-33507-3" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> DOI</a></div></div>
       </div>
     </div>
 
     <div class="pub-year-group" data-year="2024">
       <div class="pub-year">2024</div>
 
-      <div class="pub-item" data-text="fidelity machine learning models capturing flood inundation geomorphic descriptors ganga sub-basin european water tripathi mohanty singh">
+      <div class="pub-item" data-themes="floods xai" data-text="fidelity machine learning models capturing flood inundation geomorphic descriptors ganga sub-basin european water tripathi mohanty singh"><a class="pub-thumb" href="research.html"><img src="assets/img/research/geomorphic-descriptors.jpg" alt="" loading="lazy"></a><div class="pub-main">
         <span class="pub-title">Fidelity of machine learning models in capturing flood inundation through geomorphic descriptors over Ganga sub-basin, India</span>
         <span class="pub-meta">Tripathi, V., Mohanty, M. P., &amp; Singh, H. — <span class="pub-journal">European Water</span>, 87–88, 1–10</span>
-        <div class="pub-links"><a href="https://www.ewra.net/ew/pdf/EW_2024_87-88_01.pdf" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> PDF</a></div>
+        <div class="pub-links"><a href="https://www.ewra.net/ew/pdf/EW_2024_87-88_01.pdf" target="_blank" rel="noopener"><svg class="icon icon-sm"><use href="#icon-external"/></svg> PDF</a></div></div>
       </div>
     </div>
 
     <div class="pub-year-group" data-year="under review">
       <div class="pub-year">Under review</div>
 
-      <div class="pub-item" data-text="regime-dependent performance baseflow separation methods monsoon-dominated catchments india environmental research letters tripathi mohanty">
+      <div class="pub-item" data-themes="forecasting" data-text="regime-dependent performance baseflow separation methods monsoon-dominated catchments india environmental research letters tripathi mohanty"><span class="pub-thumb ph"><svg class="icon icon-lg"><use href="#icon-flask"/></svg><span>in review</span></span><div class="pub-main">
         <span class="pub-title">Regime-dependent performance of baseflow separation methods across monsoon-dominated catchments in India</span>
-        <span class="pub-meta">Tripathi, V., &amp; Mohanty, M. P. — <span class="pub-journal">Environmental Research Letters</span> (IOP) <span class="pub-badge">revision submitted</span></span>
+        <span class="pub-meta">Tripathi, V., &amp; Mohanty, M. P. — <span class="pub-journal">Environmental Research Letters</span> (IOP) <span class="pub-badge">revision submitted</span></span></div>
       </div>
 
-      <div class="pub-item" data-text="nationwide daily baseflow estimation india temporal fusion transformers process-informed clustering scientific data nature tripathi mohanty">
+      <div class="pub-item" data-themes="forecasting xai" data-text="nationwide daily baseflow estimation india temporal fusion transformers process-informed clustering scientific data nature tripathi mohanty"><span class="pub-thumb ph"><svg class="icon icon-lg"><use href="#icon-flask"/></svg><span>in review</span></span><div class="pub-main">
         <span class="pub-title">Nationwide Daily Baseflow Estimation in India (1980–2020) Using Temporal Fusion Transformers and Process-Informed Clustering</span>
-        <span class="pub-meta">Tripathi, V., &amp; Mohanty, M. P. — to be submitted to <span class="pub-journal">Scientific Data</span> (Nature)</span>
+        <span class="pub-meta">Tripathi, V., &amp; Mohanty, M. P. — to be submitted to <span class="pub-journal">Scientific Data</span> (Nature)</span></div>
       </div>
 
-      <div class="pub-item" data-text="cluster-specific deep learning models global architectures multi-horizon streamflow forecasting temporal fusion transformers journal of hydrology tripathi mohanty">
+      <div class="pub-item" data-themes="forecasting xai" data-text="cluster-specific deep learning models global architectures multi-horizon streamflow forecasting temporal fusion transformers journal of hydrology tripathi mohanty"><span class="pub-thumb ph"><svg class="icon icon-lg"><use href="#icon-flask"/></svg><span>in review</span></span><div class="pub-main">
         <span class="pub-title">Do Cluster-Specific Deep Learning Models Outperform Global Architectures in Multi-Horizon Streamflow Forecasting? Insights from Temporal Fusion Transformers Across Indian Catchments</span>
-        <span class="pub-meta">Tripathi, V., &amp; Mohanty, M. P. — to be submitted to <span class="pub-journal">Journal of Hydrology</span> (Elsevier)</span>
+        <span class="pub-meta">Tripathi, V., &amp; Mohanty, M. P. — to be submitted to <span class="pub-journal">Journal of Hydrology</span> (Elsevier)</span></div>
       </div>
     </div>
 

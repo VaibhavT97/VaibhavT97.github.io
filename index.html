@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}document.documentElement.className+=" js";</script>
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -111,6 +112,24 @@
   <path d="M6 9.5 L12 15.5 L18 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
 
+
+<symbol id="icon-moon" viewBox="0 0 24 24">
+  <path d="M20 14.5 A8.5 8.5 0 1 1 9.5 4 A6.8 6.8 0 0 0 20 14.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-sun" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M12 3 V5 M12 19 V21 M3 12 H5 M19 12 H21 M5.6 5.6 L7 7 M17 17 L18.4 18.4 M5.6 18.4 L7 17 M17 7 L18.4 5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-github" viewBox="0 0 24 24">
+  <path d="M12 3.2 C7.1 3.2 3.2 7.1 3.2 12 C3.2 15.9 5.7 19.2 9.2 20.3 C9.6 20.4 9.8 20.1 9.8 19.9 V18.4 C7.4 18.9 6.9 17.3 6.9 17.3 C6.5 16.3 5.9 16 5.9 16 C5.1 15.5 6 15.5 6 15.5 C6.9 15.6 7.4 16.4 7.4 16.4 C8.2 17.7 9.4 17.4 9.9 17.2 C10 16.6 10.2 16.2 10.5 16 C8.6 15.8 6.6 15.1 6.6 11.8 C6.6 10.9 6.9 10.1 7.5 9.5 C7.4 9.3 7.1 8.5 7.6 7.3 C7.6 7.3 8.3 7.1 9.8 8.1 C10.5 7.9 11.2 7.8 12 7.8 C12.8 7.8 13.5 7.9 14.2 8.1 C15.7 7.1 16.4 7.3 16.4 7.3 C16.9 8.5 16.6 9.3 16.5 9.5 C17.1 10.1 17.4 10.9 17.4 11.8 C17.4 15.1 15.4 15.8 13.5 16 C13.8 16.3 14.1 16.8 14.1 17.6 V19.9 C14.1 20.1 14.3 20.4 14.7 20.3 C18.3 19.2 20.8 15.9 20.8 12 C20.8 7.1 16.9 3.2 12 3.2 Z" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-flame" viewBox="0 0 24 24">
+  <path d="M12 3 C12 6.5 8 8.5 8 13 C8 16.3 9.8 18.5 12 18.5 C14.2 18.5 16 16.3 16 13.5 C16 11.8 15.2 10.6 14.2 9.6 C14.2 11 13.4 11.8 12.6 11.8 C12.6 9 12.6 5.5 12 3 Z M12 21 C8.7 21 6 18 6 14 C6 9.5 10 8 10.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
 </defs>
 </svg>
 
@@ -147,6 +166,7 @@
       </li>
       <li><a href="gallery.html" class="top">Gallery</a></li>
       <li><a href="contact.html" class="top">Contact</a></li>
+      <li class="theme-li"><button type="button" class="themetoggle" id="themeToggle" aria-label="Switch between light and dark mode" title="Light / dark"><svg class="icon icon-moon-i"><use href="#icon-moon"/></svg><svg class="icon icon-sun-i"><use href="#icon-sun"/></svg></button></li>
     </ul>
   </div>
 </nav>
@@ -159,6 +179,7 @@
     <path d="M -20 210 C 100 165, 160 215, 260 175 C 380 130, 450 180, 570 145 C 690 105, 780 150, 920 120" fill="none" stroke="#FBFBF9" stroke-width="1" opacity="0.14"/>
     <path d="M -20 150 C 90 110, 150 160, 250 120 C 360 78, 430 125, 550 95 C 660 65, 760 105, 920 75" fill="none" stroke="#E3B67A" stroke-width="1" opacity="0.18"/>
   </svg>
+  <div class="hero-rain" aria-hidden="true"><i style="left:43%;animation-duration:6.3s;animation-delay:-2.4s;height:29px"></i><i style="left:11%;animation-duration:5.9s;animation-delay:-0.6s;height:29px"></i><i style="left:66%;animation-duration:3.9s;animation-delay:-0.5s;height:52px"></i><i style="left:10%;animation-duration:4.0s;animation-delay:-3.3s;height:29px"></i><i style="left:74%;animation-duration:3.6s;animation-delay:-1.3s;height:29px"></i><i style="left:75%;animation-duration:5.1s;animation-delay:-0.3s;height:40px"></i><i style="left:7%;animation-duration:5.0s;animation-delay:-0.8s;height:52px"></i><i style="left:20%;animation-duration:5.0s;animation-delay:-3.4s;height:37px"></i><i style="left:15%;animation-duration:5.1s;animation-delay:-3.8s;height:49px"></i><i style="left:14%;animation-duration:5.0s;animation-delay:-0.4s;height:29px"></i><i style="left:81%;animation-duration:3.9s;animation-delay:-4.1s;height:53px"></i><i style="left:42%;animation-duration:4.7s;animation-delay:-5.5s;height:49px"></i><i style="left:40%;animation-duration:4.0s;animation-delay:-1.1s;height:41px"></i><i style="left:12%;animation-duration:5.1s;animation-delay:-3.2s;height:47px"></i><i style="left:95%;animation-duration:4.7s;animation-delay:-3.7s;height:30px"></i><i style="left:17%;animation-duration:4.9s;animation-delay:-1.0s;height:47px"></i><i style="left:21%;animation-duration:6.3s;animation-delay:-2.5s;height:30px"></i><i style="left:73%;animation-duration:5.1s;animation-delay:-5.3s;height:46px"></i><i style="left:45%;animation-duration:5.5s;animation-delay:-3.6s;height:55px"></i><i style="left:10%;animation-duration:6.0s;animation-delay:-5.7s;height:56px"></i><i style="left:91%;animation-duration:5.4s;animation-delay:-0.4s;height:45px"></i><i style="left:84%;animation-duration:5.1s;animation-delay:-4.1s;height:54px"></i></div>
   <div class="hero-inner">
     <div>
       <p class="hero-eyebrow">Water Resources Development &amp; Management, IIT Roorkee</p>
@@ -176,10 +197,10 @@
     </div>
   </div>
   <div class="stat-strip">
-    <div class="stat-strip-item"><span class="stat-strip-num">8</span><span class="stat-strip-label">journal publications</span></div>
-    <div class="stat-strip-item"><span class="stat-strip-num">11</span><span class="stat-strip-label">conference presentations</span></div>
-    <div class="stat-strip-item"><span class="stat-strip-num">8</span><span class="stat-strip-label">countries presented in</span></div>
-    <div class="stat-strip-item"><span class="stat-strip-num">206+</span><span class="stat-strip-label">river catchments studied</span></div>
+    <div class="stat-strip-item"><span class="stat-strip-num" data-count="8">8</span><span class="stat-strip-label">journal publications</span></div>
+    <div class="stat-strip-item"><span class="stat-strip-num" data-count="21">21</span><span class="stat-strip-label">conference presentations</span></div>
+    <div class="stat-strip-item"><span class="stat-strip-num" data-count="5">5</span><span class="stat-strip-label">international visits</span></div>
+    <div class="stat-strip-item"><span class="stat-strip-num" data-count="206" data-suffix="+">206+</span><span class="stat-strip-label">river catchments studied</span></div>
   </div>
 </header>
 
@@ -189,20 +210,20 @@
     <div class="ticker-viewport">
       <div class="ticker-track">
         <span><span class="dot">&#9679;</span>Paper published in <em>Earth's Future</em> (2026) on hydroclimatic drivers of floods across India</span>
-        <span><span class="dot">&#9679;</span>Presenting at IEEE&ndash;IGARSS 2026, Washington, D.C., USA</span>
+        <span><span class="dot">&#9679;</span>Presented at IEEE&ndash;IGARSS 2026, Washington, D.C., USA (9&ndash;14 Aug)</span>
         <span><span class="dot">&#9679;</span>Paper published in <em>Journal of Hydrology</em>: coupled flood &amp; public-health risk modelling</span>
-        <span><span class="dot">&#9679;</span>Presenting at EGU General Assembly 2026, Vienna, Austria</span>
+        <span><span class="dot">&#9679;</span>Presented at EGU General Assembly 2026, Vienna, Austria</span>
         <span><span class="dot">&#9679;</span>Revision submitted to <em>Environmental Research Letters</em> on baseflow separation methods</span>
-        <span><span class="dot">&#9679;</span>Travel grant awarded for the S2S2D Conference, University of Reading, UK</span>
+        <span><span class="dot">&#9679;</span>Presented at S2S2D 2026, University of Reading, UK (7&ndash;11 Sep)</span>
         <span><span class="dot">&#9679;</span>Paper published in <em>Natural Hazards</em>: CNN&ndash;U-Net flood susceptibility mapping</span>
         <span><span class="dot">&#9679;</span>Paper published in <em>Water Resources Management</em>: En-LSTM streamflow model</span>
         <!-- duplicate for seamless loop -->
         <span><span class="dot">&#9679;</span>Paper published in <em>Earth's Future</em> (2026) on hydroclimatic drivers of floods across India</span>
-        <span><span class="dot">&#9679;</span>Presenting at IEEE&ndash;IGARSS 2026, Washington, D.C., USA</span>
+        <span><span class="dot">&#9679;</span>Presented at IEEE&ndash;IGARSS 2026, Washington, D.C., USA (9&ndash;14 Aug)</span>
         <span><span class="dot">&#9679;</span>Paper published in <em>Journal of Hydrology</em>: coupled flood &amp; public-health risk modelling</span>
-        <span><span class="dot">&#9679;</span>Presenting at EGU General Assembly 2026, Vienna, Austria</span>
+        <span><span class="dot">&#9679;</span>Presented at EGU General Assembly 2026, Vienna, Austria</span>
         <span><span class="dot">&#9679;</span>Revision submitted to <em>Environmental Research Letters</em> on baseflow separation methods</span>
-        <span><span class="dot">&#9679;</span>Travel grant awarded for the S2S2D Conference, University of Reading, UK</span>
+        <span><span class="dot">&#9679;</span>Presented at S2S2D 2026, University of Reading, UK (7&ndash;11 Sep)</span>
         <span><span class="dot">&#9679;</span>Paper published in <em>Natural Hazards</em>: CNN&ndash;U-Net flood susceptibility mapping</span>
         <span><span class="dot">&#9679;</span>Paper published in <em>Water Resources Management</em>: En-LSTM streamflow model</span>
       </div>
@@ -212,7 +233,38 @@
 
 <main>
 
-<section id="featured" class="no-border-top">
+<section id="latest" class="no-border-top latest-section">
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-calendar"/></svg></span><h2>Latest</h2><div class="rule"></div></div>
+    <div class="latest-grid">
+      <article class="latest-card" data-city="reading">
+        <div class="latest-banner">
+          <span class="latest-date">7–11 Sep 2026</span>
+          <span class="latest-city"><svg class="icon icon-md"><use href="#icon-pin"/></svg> Reading, United Kingdom</span>
+        </div>
+        <div class="latest-body">
+          <h3>S2S2D — 3rd International Conference on Subseasonal to Seasonal to Decadal Prediction</h3>
+          <p class="latest-talk">&ldquo;Transfer-learned Transformers for Subseasonal Streamflow Forecasting in Monsoon-Dominated, Data-Sparse Catchments&rdquo;</p>
+          <p class="latest-meta"><span class="research-tag">Student travel grant</span></p>
+        </div>
+      </article>
+      <article class="latest-card" data-city="washington">
+        <div class="latest-banner">
+          <span class="latest-date">9–14 Aug 2026</span>
+          <span class="latest-city"><svg class="icon icon-md"><use href="#icon-pin"/></svg> Washington, D.C., USA</span>
+        </div>
+        <div class="latest-body">
+          <h3>IEEE International Geoscience and Remote Sensing Symposium (IGARSS 2026)</h3>
+          <p class="latest-talk">&ldquo;Regime-Dependent Evaluation of the Geomorphic Flood Index Using ERA5-Driven Hydrodynamic Simulations and Satellite Inundation over a Large Monsoon Basin&rdquo;</p>
+          <p class="latest-meta"><span class="research-tag">Student travel grants from GRSS and ANRF, India</span></p>
+        </div>
+      </article>
+    </div>
+    <p class="latest-more"><a href="conferences.html">All conferences &amp; international visits &rarr;</a></p>
+  </div>
+</section>
+
+<section id="featured">
   <div class="section-inner wide">
     <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-flask"/></svg></span><h2>Featured Research</h2><div class="rule"></div></div>
 
@@ -286,6 +338,111 @@
         <div class="gallery-caption"><h3>Global Collaboration</h3><p>Conferences and collaborations spanning eight countries across four continents.</p></div>
       </a>
 
+    </div>
+  </div>
+</section>
+
+<section id="travel">
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-globe"/></svg></span><h2>Where the work has travelled</h2><div class="rule"></div></div>
+    <p class="themes-lede">Five international visits so far, supported by travel grants from WMO, WCRP, GRSS, ANRF and IIT Roorkee. Hover or tap a pin.</p>
+    <div class="worldmap" id="worldmap">
+  <div class="map-stage">
+    <div class="map-layer map-land"></div>
+    <div class="map-layer map-borders"></div>
+    <button class="mpin other" style="left:26.58%;top:31.88%" data-id="neworleans" data-label="New Orleans, USA" data-sub="AGU Annual Meeting 2025" aria-label="New Orleans, USA: AGU Annual Meeting 2025"></button><button class="mpin other" style="left:55.73%;top:25.40%" data-id="thessaloniki" data-label="Thessaloniki, Greece" data-sub="EWRA 2023 World Congress" aria-label="Thessaloniki, Greece: EWRA 2023 World Congress"></button><button class="mpin other" style="left:58.16%;top:51.18%" data-id="kigali" data-label="Rwanda" data-sub="WCRP Open Science Conference 2023" aria-label="Rwanda: WCRP Open Science Conference 2023"></button><button class="mpin other" style="left:53.35%;top:22.40%" data-id="trieste" data-label="Trieste, Italy" data-sub="ICRC-CORDEX 2023" aria-label="Trieste, Italy: ICRC-CORDEX 2023"></button><button class="mpin visit" style="left:49.77%;top:19.00%" data-id="reading" data-label="Reading, United Kingdom" data-sub="S2S2D 2026 · 7–11 Sep 2026" aria-label="Reading: S2S2D 2026"></button><button class="mpin visit" style="left:30.61%;top:26.46%" data-id="washington" data-label="Washington, D.C., USA" data-sub="IEEE IGARSS 2026 · 9–14 Aug 2026" aria-label="Washington, D.C.: IEEE IGARSS 2026"></button><button class="mpin visit" style="left:53.94%;top:20.90%" data-id="vienna" data-label="Vienna, Austria" data-sub="EGU 2026 · 3–8 May 2026" aria-label="Vienna: EGU 2026"></button><button class="mpin visit" style="left:79.40%;top:41.68%" data-id="quynhon" data-label="Quy Nhon, Vietnam" data-sub="iVCEES 2025 · 24–28 Nov 2025" aria-label="Quy Nhon: iVCEES 2025"></button><button class="mpin visit" style="left:52.78%;top:20.94%" data-id="munich" data-label="Munich, Germany" data-sub="HIWeather 2024 · 9–13 Sep 2024" aria-label="Munich: HIWeather 2024"></button><span class="mpin home" style="left:70.25%;top:31.92%" title="Roorkee, India (home base)"></span>
+    <div class="map-tip" id="mapTip" hidden></div>
+    <div class="map-inset">
+      <div class="inset-title">Europe</div>
+      <div class="inset-stage">
+        <div class="map-layer inset-land"></div>
+        <button class="mpin other" style="left:70.73%;top:81.06%" data-id="thessaloniki" data-label="Thessaloniki, Greece" data-sub="EWRA 2023 World Congress" aria-label="Thessaloniki, Greece"></button><span class="ilabel" style="left:70.73%;top:81.06%">Thessaloniki</span><button class="mpin other" style="left:54.12%;top:64.47%" data-id="trieste" data-label="Trieste, Italy" data-sub="ICRC-CORDEX 2023" aria-label="Trieste, Italy"></button><span class="ilabel" style="left:54.12%;top:64.47%">Trieste</span><button class="mpin visit" style="left:27.40%;top:43.25%" data-id="reading" data-label="Reading, United Kingdom" data-sub="S2S2D 2026 · 7–11 Sep 2026" aria-label="Reading"></button><span class="ilabel" style="left:27.40%;top:43.25%">Reading</span><button class="mpin visit" style="left:58.83%;top:55.39%" data-id="vienna" data-label="Vienna, Austria" data-sub="EGU 2026 · 3–8 May 2026" aria-label="Vienna"></button><span class="ilabel" style="left:58.83%;top:55.39%">Vienna</span><button class="mpin visit" style="left:50.15%;top:55.67%" data-id="munich" data-label="Munich, Germany" data-sub="HIWeather 2024 · 9–13 Sep 2024" aria-label="Munich"></button><span class="ilabel lft" style="left:50.15%;top:55.67%">Munich</span>
+      </div>
+    </div>
+  </div>
+  <div class="map-legend">
+    <span><i class="lg visit"></i>International visit (in person)</span>
+    <span><i class="lg other"></i>Other venues where work was presented</span>
+    <span><i class="lg home"></i>Home base: Roorkee</span>
+  </div>
+  <div class="visit-chips"><button class="visit-chip" data-id="reading"><span class="vc-date">7–11 Sep 2026</span><span class="vc-city">Reading, United Kingdom</span><span class="vc-event">S2S2D 2026</span></button><button class="visit-chip" data-id="washington"><span class="vc-date">9–14 Aug 2026</span><span class="vc-city">Washington, D.C., USA</span><span class="vc-event">IEEE IGARSS 2026</span></button><button class="visit-chip" data-id="vienna"><span class="vc-date">3–8 May 2026</span><span class="vc-city">Vienna, Austria</span><span class="vc-event">EGU 2026</span></button><button class="visit-chip" data-id="quynhon"><span class="vc-date">24–28 Nov 2025</span><span class="vc-city">Quy Nhon, Vietnam</span><span class="vc-event">iVCEES 2025</span></button><button class="visit-chip" data-id="munich"><span class="vc-date">9–13 Sep 2024</span><span class="vc-city">Munich, Germany</span><span class="vc-event">HIWeather 2024</span></button></div>
+</div>
+    <p class="latest-more"><a href="conferences.html">Full conference list &rarr;</a></p>
+  </div>
+</section>
+
+<section id="timeline" class="tint">
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-calendar"/></svg></span><h2>Research Timeline, 2023&ndash;2026</h2><div class="rule"></div></div>
+    <div class="tl-legend"><span><i class="tl-dot tl-paper"></i>Paper published</span><span><i class="tl-dot tl-talk"></i>Conference talk</span><span><i class="tl-dot tl-grant"></i>Grant / course</span><span><i class="tl-dot tl-role"></i>Role / milestone</span></div>
+    <div class="tl-grid"><div class="tl-col"><div class="tl-year"><span>2023</span></div><ul><li class="tl-role"><span class="tl-m">Jan</span><span class="tl-t">Began PhD at IIT Roorkee</span></li><li class="tl-talk"><span class="tl-m">Jun–Jul</span><span class="tl-t">EWRA World Congress, Thessaloniki</span></li><li class="tl-role"><span class="tl-m">Sep</span><span class="tl-t">Organising Head, RASTER 2023 training programme</span></li><li class="tl-talk"><span class="tl-m">Sep</span><span class="tl-t">ICRC-CORDEX, Trieste</span></li><li class="tl-talk"><span class="tl-m">Oct</span><span class="tl-t">WCRP Open Science Conference, Rwanda</span></li><li class="tl-talk"><span class="tl-m">Dec</span><span class="tl-t">AGU Annual Meeting 2023</span></li><li class="tl-grant"><span class="tl-m">Dec</span><span class="tl-t">Travel grant, IndoML 2023, IIT Bombay</span></li></ul></div><div class="tl-col"><div class="tl-year"><span>2024</span></div><ul><li class="tl-role"><span class="tl-m">Jan</span><span class="tl-t">Organising Head, Int'l Conf. on Future of Water Resources</span></li><li class="tl-grant"><span class="tl-m">Mar</span><span class="tl-t">Hydro-ML workshop, IISER Bhopal (travel grant)</span></li><li class="tl-talk"><span class="tl-m">Apr</span><span class="tl-t">EGU General Assembly, Vienna</span></li><li class="tl-grant"><span class="tl-m">Jun</span><span class="tl-t">Urban flood modelling course, BITS Pilani Hyderabad</span></li><li class="tl-talk"><span class="tl-m">Sep</span><span class="tl-t">HIWeather Final Conference, Munich (WMO grant)</span></li><li class="tl-paper"><span class="tl-t">European Water 87–88: ML &amp; geomorphic descriptors for flood inundation</span></li></ul></div><div class="tl-col"><div class="tl-year"><span>2025</span></div><ul><li class="tl-talk"><span class="tl-m">Apr–May</span><span class="tl-t">EGU General Assembly, Vienna</span></li><li class="tl-paper"><span class="tl-t">ESPR: geomorphic descriptors + ML for flood risk, Ganga basin</span></li><li class="tl-paper"><span class="tl-t">Environ. &amp; Sustain. Indicators: stacked ensemble + XAI, Kosi megafan</span></li><li class="tl-paper"><span class="tl-t">Natural Hazards: 2025 Western Himalaya multi-hazard cascade</span></li><li class="tl-talk"><span class="tl-m">Oct</span><span class="tl-t">IAHS Scientific Assembly, Roorkee</span></li><li class="tl-talk"><span class="tl-m">Nov</span><span class="tl-t">iVCEES, Quy Nhon, Vietnam (WCRP grant)</span></li><li class="tl-talk"><span class="tl-m">Dec</span><span class="tl-t">AGU Annual Meeting, New Orleans (3 talks)</span></li></ul></div><div class="tl-col"><div class="tl-year"><span>2026</span></div><ul><li class="tl-role"><span class="tl-m">Feb</span><span class="tl-t">Student Coordinator, Roorkee Water Conclave</span></li><li class="tl-talk"><span class="tl-m">May</span><span class="tl-t">EGU General Assembly, Vienna</span></li><li class="tl-paper"><span class="tl-t">Water Resources Management: En-LSTM streamflow model</span></li><li class="tl-paper"><span class="tl-t">Natural Hazards: CNN U-Net rapid flood susceptibility</span></li><li class="tl-paper"><span class="tl-t">Journal of Hydrology: coupled flood &amp; public-health risk</span></li><li class="tl-paper"><span class="tl-t">Earth's Future: interpretable deep learning of flood drivers</span></li><li class="tl-talk"><span class="tl-m">Aug</span><span class="tl-t">IEEE IGARSS, Washington, D.C.</span></li><li class="tl-talk"><span class="tl-m">Sep</span><span class="tl-t">S2S2D, University of Reading, UK</span></li></ul></div></div>
+  </div>
+</section>
+
+<section id="vision">
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-flame"/></svg></span><h2>Where the research is heading</h2><div class="rule"></div></div>
+    <div class="vision-grid">
+      <div class="vision-text">
+        <span class="research-tag">research vision</span>
+        <h3>Compound hazards: from wildfire to flood and drought</h3>
+        <p>Floods and droughts are usually studied one at a time. The next step is to follow one hazard into the next: how a fire-scarred catchment changes its response to the first monsoon rains, and how that cascades into floods, sediment and debris, and later low-flow stress.</p>
+        <p>The plan builds on explainable deep learning and process-informed clustering already developed for Indian catchments, adding burn severity and recovery stage as new drivers, and aiming at uncertainty-aware early warning for the Himalaya and central Indian forests.</p>
+      </div>
+      <figure class="vision-fig">
+        <svg viewBox="0 0 520 380" role="img" aria-label="Schematic: wildfire alters the catchment, which amplifies flood and debris flow, then sediment and low-flow stress">
+          <defs><marker id="vzArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="vz-head"/></marker></defs>
+          <g class="vz-node vz-fire"><rect x="14" y="14" width="236" height="78" rx="10"/><text x="132" y="46" class="vz-t1">Fire season</text><text x="132" y="68" class="vz-t2">Feb&ndash;May: forest loss, burn scars</text></g>
+          <g class="vz-node vz-soil"><rect x="270" y="14" width="236" height="78" rx="10"/><text x="388" y="46" class="vz-t1">Altered catchment</text><text x="388" y="68" class="vz-t2">less canopy, water-repellent soil</text></g>
+          <g class="vz-node vz-flood"><rect x="14" y="150" width="236" height="78" rx="10"/><text x="132" y="182" class="vz-t1">Monsoon onset</text><text x="132" y="204" class="vz-t2">Jun&ndash;Sep: faster runoff, flash floods</text></g>
+          <g class="vz-node vz-sed"><rect x="270" y="150" width="236" height="78" rx="10"/><text x="388" y="182" class="vz-t1">Sediment &amp; debris</text><text x="388" y="204" class="vz-t2">channel and reservoir loading</text></g>
+          <g class="vz-node vz-dry"><rect x="142" y="286" width="236" height="78" rx="10"/><text x="260" y="318" class="vz-t1">Low-flow stress</text><text x="260" y="340" class="vz-t2">less recharge, baseflow decline</text></g>
+          <path class="vz-arrow" d="M250 53 H268" marker-end="url(#vzArrow)"/>
+          <path class="vz-arrow" d="M388 92 V120 Q388 130 378 130 H140 Q132 130 132 140 V148" marker-end="url(#vzArrow)"/>
+          <path class="vz-arrow" d="M250 189 H268" marker-end="url(#vzArrow)"/>
+          <path class="vz-arrow" d="M388 228 V256 Q388 266 378 266 H270 Q260 266 260 276 V284" marker-end="url(#vzArrow)"/>
+        </svg>
+        <figcaption>Planned research direction, shown as a schematic: no results are claimed here.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="code" class="tint">
+  <div class="section-inner wide">
+    <div class="section-head"><span class="section-icon"><svg class="icon icon-lg"><use href="#icon-chart"/></svg></span><h2>Code &amp; Data</h2><div class="rule"></div></div>
+    <div class="code-grid">
+      <div class="code-text">
+        <span class="research-tag">open code</span>
+        <h3>Multi-horizon streamflow forecasting with a Temporal Fusion Transformer</h3>
+        <p>A PyTorch Lightning implementation that forecasts streamflow 1, 3, 7, 14 and 30 days ahead for 206 Indian river basins, comparing cluster-specific models against a single global model.</p>
+        <ul class="code-stats">
+          <li><b>206</b> basins</li>
+          <li><b>1.5M</b> training windows</li>
+          <li><b>3</b> quantiles (P10 / P50 / P90)</li>
+          <li><b>5</b> lead times</li>
+        </ul>
+        <p class="code-links"><a class="cv-button" href="https://github.com/VaibhavT97/multi-horizon-streamflow-forecasting" target="_blank" rel="noopener"><svg class="icon icon-md"><use href="#icon-github"/></svg> View on GitHub</a></p>
+      </div>
+      <figure class="code-fig">
+        <svg viewBox="0 0 640 330" role="img" aria-label="Architecture: dynamic past, known future and static inputs feed variable-selection networks, an LSTM encoder-decoder, masked attention and quantile outputs for five lead times">
+          <defs><marker id="cdArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" class="vz-head"/></marker></defs>
+          <g class="cd-in"><rect x="4" y="20" width="150" height="64" rx="8"/><text x="79" y="47" class="cd-t1">Past dynamic</text><text x="79" y="68" class="cd-t2">Q, P, Tmax, Tmin, PET</text></g>
+          <g class="cd-in"><rect x="4" y="132" width="150" height="64" rx="8"/><text x="79" y="159" class="cd-t1">Known future</text><text x="79" y="180" class="cd-t2">P, Tmax, Tmin, PET</text></g>
+          <g class="cd-in"><rect x="4" y="244" width="150" height="64" rx="8"/><text x="79" y="271" class="cd-t1">Static</text><text x="79" y="292" class="cd-t2">54 catchment attributes</text></g>
+          <g class="cd-mid"><rect x="196" y="60" width="112" height="210" rx="10"/><text x="252" y="132" class="cd-t1">Variable</text><text x="252" y="152" class="cd-t1">selection</text><text x="252" y="178" class="cd-t2">gated residual</text><text x="252" y="196" class="cd-t2">networks</text></g>
+          <g class="cd-mid"><rect x="346" y="60" width="112" height="210" rx="10"/><text x="402" y="132" class="cd-t1">LSTM</text><text x="402" y="152" class="cd-t1">encoder&ndash;decoder</text><text x="402" y="178" class="cd-t2">masked multi-head</text><text x="402" y="196" class="cd-t2">attention</text></g>
+          <g class="cd-out"><rect x="496" y="40" width="140" height="64" rx="8"/><text x="566" y="67" class="cd-t1">P10 &middot; P50 &middot; P90</text><text x="566" y="87" class="cd-t2">quantile forecasts</text></g>
+          <g class="cd-out"><rect x="496" y="132" width="140" height="64" rx="8"/><text x="566" y="159" class="cd-t1">Lead times</text><text x="566" y="179" class="cd-t2">1 &middot; 3 &middot; 7 &middot; 14 &middot; 30 d</text></g>
+          <g class="cd-out"><rect x="496" y="224" width="140" height="64" rx="8"/><text x="566" y="251" class="cd-t1">Evaluation</text><text x="566" y="271" class="cd-t2">NSE, KGE, wNSE, CSI</text></g>
+          <path class="vz-arrow" d="M154 52 H196" marker-end="url(#cdArrow)"/>
+          <path class="vz-arrow" d="M154 164 H196" marker-end="url(#cdArrow)"/>
+          <path class="vz-arrow" d="M154 276 H196" marker-end="url(#cdArrow)"/>
+          <path class="vz-arrow" d="M308 165 H346" marker-end="url(#cdArrow)"/>
+          <path class="vz-arrow" d="M458 165 H496" marker-end="url(#cdArrow)"/>
+        </svg>
+        <figcaption>Model pipeline, simplified from the repository notebook.</figcaption>
+      </figure>
     </div>
   </div>
 </section>

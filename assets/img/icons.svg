@@ -93,5 +93,23 @@
   <path d="M6 9.5 L12 15.5 L18 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
 
+
+<symbol id="icon-moon" viewBox="0 0 24 24">
+  <path d="M20 14.5 A8.5 8.5 0 1 1 9.5 4 A6.8 6.8 0 0 0 20 14.5 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="icon-sun" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M12 3 V5 M12 19 V21 M3 12 H5 M19 12 H21 M5.6 5.6 L7 7 M17 17 L18.4 18.4 M5.6 18.4 L7 17 M17 7 L18.4 5.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="icon-github" viewBox="0 0 24 24">
+  <path d="M12 3.2 C7.1 3.2 3.2 7.1 3.2 12 C3.2 15.9 5.7 19.2 9.2 20.3 C9.6 20.4 9.8 20.1 9.8 19.9 V18.4 C7.4 18.9 6.9 17.3 6.9 17.3 C6.5 16.3 5.9 16 5.9 16 C5.1 15.5 6 15.5 6 15.5 C6.9 15.6 7.4 16.4 7.4 16.4 C8.2 17.7 9.4 17.4 9.9 17.2 C10 16.6 10.2 16.2 10.5 16 C8.6 15.8 6.6 15.1 6.6 11.8 C6.6 10.9 6.9 10.1 7.5 9.5 C7.4 9.3 7.1 8.5 7.6 7.3 C7.6 7.3 8.3 7.1 9.8 8.1 C10.5 7.9 11.2 7.8 12 7.8 C12.8 7.8 13.5 7.9 14.2 8.1 C15.7 7.1 16.4 7.3 16.4 7.3 C16.9 8.5 16.6 9.3 16.5 9.5 C17.1 10.1 17.4 10.9 17.4 11.8 C17.4 15.1 15.4 15.8 13.5 16 C13.8 16.3 14.1 16.8 14.1 17.6 V19.9 C14.1 20.1 14.3 20.4 14.7 20.3 C18.3 19.2 20.8 15.9 20.8 12 C20.8 7.1 16.9 3.2 12 3.2 Z" fill="currentColor"/>
+</symbol>
+
+<symbol id="icon-flame" viewBox="0 0 24 24">
+  <path d="M12 3 C12 6.5 8 8.5 8 13 C8 16.3 9.8 18.5 12 18.5 C14.2 18.5 16 16.3 16 13.5 C16 11.8 15.2 10.6 14.2 9.6 C14.2 11 13.4 11.8 12.6 11.8 C12.6 9 12.6 5.5 12 3 Z M12 21 C8.7 21 6 18 6 14 C6 9.5 10 8 10.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
 </defs>
 </svg>
