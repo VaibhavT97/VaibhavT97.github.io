@@ -88,24 +88,6 @@
   wire("yearChips", "data-year", function (v) { year = v.toLowerCase(); });
 })();
 
-// Placeholder external links — replaced once real URLs are provided
-(function () {
-  const placeholders = {
-    "link-scholar": null,
-    "link-linkedin": null,
-    "link-scholar-2": null,
-    "link-linkedin-2": null
-  };
-  Object.keys(placeholders).forEach(function (id) {
-    const el = document.getElementById(id);
-    if (el && !placeholders[id]) {
-      el.addEventListener("click", function (e) {
-        e.preventDefault();
-      });
-    }
-  });
-})();
-
 // Theme toggle (light / dark)
 (function () {
   const btn = document.getElementById("themeToggle");

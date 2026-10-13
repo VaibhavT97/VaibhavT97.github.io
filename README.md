@@ -23,7 +23,6 @@ Everything is in `index.html` — sections are marked with `<section id="...">`.
 
 ## Still to do
 
-- Add real Google Scholar and LinkedIn URLs — placeholders are in `index.html` (search for `link-scholar` and `link-linkedin`) and disabled in `assets/js/main.js` until filled in.
 
 ## Local preview
 
