@@ -1268,3 +1268,14 @@ a.gallery-tile.fig-tile .gallery-caption::after { display: none; }
 .cd-t1 { font-size: 17px; }
 .cd-t2 { font-size: 12.5px; }
 .latest-section { padding-top: 56px; }
+
+/* Photo tiles */
+.photo-tile { margin: 0; }
+.photo-tile img { aspect-ratio: 4 / 3; object-position: center 25%; }
+.photo-tile.wide-tile { grid-column: span 2; }
+.photo-tile.wide-tile img { aspect-ratio: 2 / 1; object-position: center 40%; }
+@media (max-width: 540px) { .photo-tile.wide-tile { grid-column: auto; } }
+.visit-photo img { object-position: center 20%; }
+.visit-photo:has(img)::before { display: none; }
+.visit-photo:has(img) .vp-city, .visit-photo:has(img) .vp-year { position: relative; z-index: 1; text-shadow: 0 1px 6px rgba(0,0,0,.7); }
+.visit-photo:has(img)::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,30,32,.75), transparent 55%); }
