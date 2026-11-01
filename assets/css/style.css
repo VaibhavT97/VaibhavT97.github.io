@@ -1290,3 +1290,4 @@ a.gallery-tile.fig-tile .gallery-caption::after { display: none; }
 .photo-tile.wide-tile img[src*="wright-group"] { object-position: center 35%; }
 .photo-tile.wide-tile img[src*="ivcees-hall"] { object-position: center 45%; } .photo-tile.wide-tile img[src*="ivcees-icise"] { object-position: center 55%; }
 .photo-tile img[src*="s2s2d-lobby"] { object-position: center 35%; }
+.photo-tile img[src*="igarss-selfie"] { object-position: center 38%; }
