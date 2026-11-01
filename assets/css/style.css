@@ -1280,3 +1280,4 @@ a.gallery-tile.fig-tile .gallery-caption::after { display: none; }
 .visit-photo:has(img) .vp-city, .visit-photo:has(img) .vp-year { position: relative; z-index: 1; text-shadow: 0 1px 6px rgba(0,0,0,.7); }
 .visit-photo:has(img)::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,30,32,.75), transparent 55%); }
 .photo-tile.wide-tile img[src*="igarss-poster"] { object-position: center 20%; }
+.photo-tile.wide-tile img[src*="iahs-manfreda"] { object-position: center 30%; }
