@@ -1282,3 +1282,6 @@ a.gallery-tile.fig-tile .gallery-caption::after { display: none; }
 .photo-tile.wide-tile img[src*="igarss-poster"] { object-position: center 20%; }
 .photo-tile.wide-tile img[src*="iahs-manfreda"] { object-position: center 30%; }
 .photo-tile.wide-tile img[src*="rwc-group"] { object-position: center 60%; }
+.gallery-grid { grid-auto-flow: dense; }
+.photo-tile.wide-tile img[src*="hiw-presenting"] { object-position: center 55%; }
+.photo-tile.wide-tile img[src*="hiw-group"] { object-position: center 40%; }
