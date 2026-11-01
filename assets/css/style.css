@@ -1287,3 +1287,4 @@ a.gallery-tile.fig-tile .gallery-caption::after { display: none; }
 .photo-tile.wide-tile img[src*="hiw-group"] { object-position: center 40%; }
 .photo-tile.wide-tile img[src*="bits-group"] { object-position: center 30%; }
 .photo-tile.wide-tile img[src*="merz-group"] { object-position: center 30%; }
+.photo-tile.wide-tile img[src*="wright-group"] { object-position: center 35%; }
