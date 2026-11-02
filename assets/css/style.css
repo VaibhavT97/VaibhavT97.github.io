@@ -1292,3 +1292,4 @@ a.gallery-tile.fig-tile .gallery-caption::after { display: none; }
 .photo-tile img[src*="s2s2d-lobby"] { object-position: center 35%; }
 .photo-tile img[src*="igarss-selfie"] { object-position: center 38%; }
 .photo-tile.wide-tile img[src*="egu-talk"] { object-position: center 40%; } .visit-photo img[src*="egu-talk"] { object-position: center 35%; }
+.photo-tile img[src*="cultural-secretary"] { object-position: center 25%; }
